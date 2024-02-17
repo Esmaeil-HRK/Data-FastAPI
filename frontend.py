@@ -21,7 +21,7 @@ with st.form("user_data_form"):
             "nid": nid
         }
         
-        response = requests.post("http://192.168.1.130:8000/process-data/", json=data)
+        response = requests.post("http://192.168.56.1:8000/process-data/", json=data)
         if response.status_code == 200:
             result_data = response.json()
             st.success("Data Processed Successfully!")
